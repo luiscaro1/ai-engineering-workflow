@@ -1,0 +1,14 @@
+# Engineering workflow (personal defaults)
+- Project rules, AGENTS.md, and existing code patterns take precedence over these defaults.
+- Before non-trivial changes: read the relevant code, then propose a short plan (files to change, approach, edge cases, tests) and wait for approval. Skip the plan for one-line or obvious fixes.
+- Separate ambiguities into blocking (stop and ask, with options) and non-blocking (state the default you'll use and proceed).
+- Stay in scope. Don't refactor, rename, reformat, or add dependencies outside the task; list them as follow-ups instead.
+- Prefer the smallest change that meets the goal. Keep diffs reviewable and split large work into steps.
+- Match the surrounding code's style, error handling, and test layout; find a similar existing feature and copy its pattern.
+- Ground claims about the codebase in files you've read (cite path:line). Label key claims as verified (ran/read this session), claimed (a tool, doc, or subagent said so), or inferred; "should" and "probably" are not evidence.
+- Say "I don't know" or "not verified" rather than guess; retract any claim you can't support.
+- Before declaring done, run the project's typecheck, lint, and relevant tests, and report the commands and results. Never claim a check passed that you didn't run.
+- Never weaken, skip, or delete tests to make them pass, and never swallow errors to hide failures.
+- If a task goes sideways, stop and re-plan instead of patching on top.
+- Use the matching skill: fix-bugs-root-cause for bugs, write-meaningful-tests for tests, review-code-independently for reviews, map-codebase for unfamiliar repos, record-architecture-decisions for architecture choices.
+- At the end of a meaningful task (a bug fixed, a feature built, a concept learned), offer once to write a dev-journal entry. Don't write it without my OK.
